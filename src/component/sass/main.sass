@@ -1,0 +1,90 @@
+.films
+  background-color: white
+  &__header
+    height: 10vh
+    font-size: 19px
+    font-weight: 700
+    background-color: rgb(241,241,241)
+    color: rgb(51,51,51)
+    text-align: center
+    letter-spacing: 3px
+    position: relative
+    display: flex
+    p
+      align-self: center
+      margin: 0 auto
+    button
+      position: absolute
+      top: 0
+      bottom: 0
+      border: none
+      background-color: rgb(241,241,241)
+      cursor: pointer
+      color: red
+      font-size: 35px
+      left: 10px
+      font-stretch: ultra-condensed
+  &__date
+    height: 10vh
+    margin: 0 auto
+    font-size: 18px
+    text-align: center
+    display: flex
+    align-items: center
+    justify-content: center
+    font-weight: 600
+    border-bottom: 1px solid rgb(241,241,241)
+
+.button__show
+  width: 100%
+  height: 10vh
+  display: flex
+  align-items: center
+  justify-content: center
+  button
+    width: calc(100vw - 40px)
+    height: 55%
+    background-color: white
+    border: 1px solid rgb(200,200,200)
+    border-radius: 5px
+    color: rgb(100,100,100)
+    font-size: 16px
+
+
+.serial__wrap
+  width: calc(100vw - 40px)
+  height: 15vh
+  margin: 5vh auto
+  display: grid
+  grid-template-columns: 12vh 1fr
+
+.serial__img
+  width: 100%
+  height: 15vh
+  img
+    height: 100%
+    box-shadow: 0 0 10px rgba(0,0,0,0.5)
+
+.serial__info
+  display: grid
+  grid-template-rows: 1fr 1fr
+
+.serial__name
+  font-size: 17px
+  color: rgba(0,0,0,0.8)
+
+.serial__year
+  font-size: 15px
+  color: rgb(150,150,150)
+
+.flex
+  display: flex
+  align-items: flex-end
+  div
+    background-color: rgb(241,241,241)
+    color: rgb(150,150,150)
+    width: 50vw
+    height: 6vh
+    text-align: center
+    line-height: 6vh
+    border-radius: 5px
