@@ -3,11 +3,22 @@ import Main from './Main';
 import './sass/App.sass';
 
 import Calendar from 'react-calendar';
+import $ from "jquery";
 
 import Main_img from './../img/tv.png';
 import Jun from './monthInfo/Jun';
 import May from './monthInfo/May';
 import Jul from './monthInfo/Jul';
+
+
+function clickImg(event){
+    if ($(event.target).hasClass('clicked')){
+        $(event.target).removeClass('clicked').parent('div').parent('div').css('height', '15vh');
+    } else {
+        $(event.target).addClass('clicked').parent('div').parent('div').css('height', '100vh');
+    }
+}
+
 
 
 class App extends React.Component {
@@ -29,7 +40,6 @@ class App extends React.Component {
     };
 
     onChange = date => this.setState({ date });
-
 
     goBack = () => {
         this.setState({
@@ -108,7 +118,7 @@ class App extends React.Component {
             for (let i = 0; i < this.state.listLang && i < serialsName.length; i++){
                 firstListSerial = (
                     <div key = {i} className={'serial__wrap'}>
-                        <div className={'serial__img'}>
+                        <div onClick={clickImg} className={'serial__img'}>
                             <img alt={serialsName[i]} src = {serialImg[i]} />
                         </div>
                         <div className={'serial__info'}>
@@ -128,7 +138,7 @@ class App extends React.Component {
             for (let i = this.state.listLang; i < serialsName.length; i++) {
                 secondListSerial = (
                     <div key = {i} className={'serial__wrap'}>
-                        <div className={'serial__img'}>
+                        <div onClick={clickImg} className={'serial__img'}>
                             <img alt={serialsName[i]} src = {serialImg[i]} />
                         </div>
                         <div className={'serial__info'}>
