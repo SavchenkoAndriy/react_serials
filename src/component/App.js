@@ -11,14 +11,15 @@ import May from './monthInfo/May';
 import Jul from './monthInfo/Jul';
 
 
+
 function clickImg(event){
     if ($(event.target).hasClass('clicked')){
         $(event.target).removeClass('clicked').parent('div').parent('div').css('height', '15vh');
     } else {
-        $(event.target).addClass('clicked').parent('div').parent('div').css('height', '100vh');
+        $(event.target).addClass('clicked').parent('div').parent('div').css('height', 'calc(90vw/0.68)');
     }
 }
-
+// по іншому не придумав як не використувуючи Jquery
 
 
 class App extends React.Component {
