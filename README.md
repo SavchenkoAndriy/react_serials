@@ -6,7 +6,7 @@
 Всі залежності є в packege.json
 
 В папці component знаходяться всі файли для перевірки.
-component/sass стилі  
+component/sass стилі
 component/monthInfo інформація про серіали
 
 При нажатті на дату береться вся інформація про серіали з component/monthInfo в залежності від дати.
