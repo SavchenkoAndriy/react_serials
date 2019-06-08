@@ -16,7 +16,7 @@ class Main extends React.Component{
                 <div className={'films'}>
                     <div className={'films__header'}>
                         <button onClick={this.props.goBack}>{a}</button>
-                        <p>SUPER FILM</p>
+                        <p>SUPER FILM!!!</p>
                     </div>
                     <div className={'films__date'}>
                         <p>{this.props.day} {this.props.month} {this.props.year}</p>
